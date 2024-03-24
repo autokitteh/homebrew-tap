@@ -1,27 +1,26 @@
 class Autokitteh < Formula
-    desc "Durable workflow automation made simple"
-    homepage "https://autokitteh.com"
-    url "https://github.com/autokitteh/autokitteh/archive/refs/tags/v0.3.1.tar.gz"
-    sha256 "ba0636682b91cc1c57ec40bd770815473014acc4072f1859d041e8c81efacb26"
-    license "Apache-2.0"
-    head "https://github.com/autokitteh/autokitteh.git", branch: "main"
-  
-    depends_on "go" => :build
-  
-    def install
-      ldflags = %W[
-        -s -w
-        -X go.autokitteh.dev/autokitteh/internal/version.Version=#{version}
-        -X go.autokitteh.dev/autokitteh/internal/version.Time=#{time.iso8601}
-        -X go.autokitteh.dev/autokitteh/internal/version.User=brew
-        -X go.autokitteh.dev/autokitteh/internal/version.Commit=
-      ]
-      system "go", "build", *std_go_args(ldflags:), "-o", bin/"ak", "./cmd/ak"
-      generate_completions_from_executable(bin/"ak", "completion")
-    end
-  
-    test do
-      assert_match version, shell_output("#{bin}/ak version").strip
-    end
+  desc "Durable workflow automation made simple"
+  homepage "https://autokitteh.com"
+  url "https://github.com/autokitteh/autokitteh/archive/refs/tags/v0.3.3.tar.gz"
+  sha256 "77f14ce9c7bdbd72df5bfb08756de53dd39f35a505345ff5e26970d5bb935da7"
+  license "Apache-2.0"
+  head "https://github.com/autokitteh/autokitteh.git", branch: "main"
+
+  depends_on "go" => :build
+
+  def install
+    ldflags = %W[
+      -s -w
+      -X go.autokitteh.dev/autokitteh/internal/version.Version=#{version}
+      -X go.autokitteh.dev/autokitteh/internal/version.Time=#{time.iso8601}
+      -X go.autokitteh.dev/autokitteh/internal/version.User=brew
+      -X go.autokitteh.dev/autokitteh/internal/version.Commit=
+    ]
+    system "go", "build", *std_go_args(ldflags:), "-o", bin/"ak", "./cmd/ak"
+    generate_completions_from_executable(bin/"ak", "completion")
   end
-  
+
+  test do
+    assert_match version, shell_output("#{bin}/ak version").strip
+  end
+end
