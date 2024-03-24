@@ -17,7 +17,7 @@ brew install autokitteh
 
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
 
-## How do I update this formula manually?
+## Maintainer instructions
 
 ```shell
 brew update && brew upgrade
