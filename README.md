@@ -1,4 +1,4 @@
-# Homebrew Tap for autokitteh
+# Homebrew Tap for Autokitteh
 
 ## How do I install this formula?
 
@@ -24,5 +24,5 @@ brew update && brew upgrade
 
 HOMEBREW_GITHUB_API_TOKEN=github_pat_secret \
   brew bump-formula-pr autokitteh/tap/autokitteh \
-  --no-fork --version <NEW-VERSION> [--dry-run]
+  --no-fork --version <NEW-VERSION>
 ```
