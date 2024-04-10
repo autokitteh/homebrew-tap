@@ -1,4 +1,4 @@
-# Homebrew Tap for Autokitteh
+# Homebrew Tap for AutoKitteh
 
 ## How do I install this formula?
 
