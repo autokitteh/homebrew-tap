@@ -1,4 +1,4 @@
-class AutoKitteh < Formula
+class Autokitteh < Formula
   desc "Durable workflow automation made simple"
   homepage "https://autokitteh.com"
   url "https://github.com/autokitteh/autokitteh/archive/refs/tags/v0.4.3.tar.gz"
