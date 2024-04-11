@@ -13,7 +13,7 @@ class Autokitteh < Formula
       -s -w
       -X go.autokitteh.dev/autokitteh/internal/version.Version=#{version}
       -X go.autokitteh.dev/autokitteh/internal/version.Time=#{time.iso8601}
-      -X go.autokitteh.dev/autokitteh/internal/version.User=brew
+      -X go.autokitteh.dev/autokitteh/internal/version.User=Homebrew
       -X go.autokitteh.dev/autokitteh/internal/version.Commit=
     ]
     system "go", "build", *std_go_args(ldflags:), "-o", bin/"ak", "./cmd/ak"
