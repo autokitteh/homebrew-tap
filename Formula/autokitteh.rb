@@ -1,8 +1,8 @@
 class Autokitteh < Formula
   desc "Durable workflow automation made simple"
   homepage "https://autokitteh.com"
-  url "https://github.com/autokitteh/autokitteh/archive/refs/tags/v0.6.9.tar.gz"
-  sha256 "d362dcd2f09c6d2e004398ac0d6c048fe79111522fdabbfe4a2f9222165a798a"
+  url "https://github.com/autokitteh/autokitteh/archive/refs/tags/v0.6.10.tar.gz"
+  sha256 "6c9bf04d74981ad950d4d10eae9f19d8164571673a04497a47b4b4f00ad26fe0"
   license "Apache-2.0"
   head "https://github.com/autokitteh/autokitteh.git", branch: "main"
 
