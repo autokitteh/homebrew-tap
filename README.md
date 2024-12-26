@@ -19,10 +19,6 @@ brew install autokitteh
 
 ## Maintainer instructions
 
-```shell
-brew update && brew upgrade
-
-HOMEBREW_GITHUB_API_TOKEN=github_pat_secret \
-  brew bump-formula-pr autokitteh/tap/autokitteh \
-  --no-fork --version <NEW-VERSION>
-```
+This repos is updated automatically by:
+- https://github.com/autokitteh/autokitteh/blob/main/.github/workflows/release.yml
+- https://github.com/autokitteh/autokitteh/blob/main/.goreleaser.yaml
