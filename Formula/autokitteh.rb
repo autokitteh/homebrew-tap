@@ -5,13 +5,13 @@
 class Autokitteh < Formula
   desc "Durable workflow automation in just a few lines of code"
   homepage "https://autokitteh.com/"
-  version "0.21.11"
+  version "0.22.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/autokitteh/autokitteh/releases/download/v0.21.11/autokitteh_darwin_x86_64.tar.gz"
-      sha256 "78c21f31a88af50626833049a39e732244acc590259745dce933e4504a224869"
+      url "https://github.com/autokitteh/autokitteh/releases/download/v0.22.0/autokitteh_darwin_x86_64.tar.gz"
+      sha256 "7784f3094e7c0388377c4db12ae6c2aec427cd298491d7c252bc4659cbb2dea4"
 
       def install
         bin.install "ak"
@@ -19,8 +19,8 @@ class Autokitteh < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/autokitteh/autokitteh/releases/download/v0.21.11/autokitteh_darwin_arm64.tar.gz"
-      sha256 "6f1fade2cee244c878a12a1d11e785fae8c14a54cc19c4e6ef58f125ea0fb492"
+      url "https://github.com/autokitteh/autokitteh/releases/download/v0.22.0/autokitteh_darwin_arm64.tar.gz"
+      sha256 "68c4996ca92cc68d409807072d3aab83536749327567b610a7e811f37a410512"
 
       def install
         bin.install "ak"
@@ -31,16 +31,16 @@ class Autokitteh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/autokitteh/autokitteh/releases/download/v0.21.11/autokitteh_linux_x86_64.tar.gz"
-      sha256 "f7fc71fafa5b085579bdf799321302d699e701ef24e8559c2f075c664b0d6ffb"
+      url "https://github.com/autokitteh/autokitteh/releases/download/v0.22.0/autokitteh_linux_x86_64.tar.gz"
+      sha256 "ea6fa7e0b806cee83cbd0b92b016944f68324880105cd7eba036a69a6bac2b57"
       def install
         bin.install "ak"
         generate_completions_from_executable(bin/"ak", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/autokitteh/autokitteh/releases/download/v0.21.11/autokitteh_linux_arm64.tar.gz"
-      sha256 "8ccebcc8dd2154ecf411d07c356fa69ecff3ef18032128b38ca5600f9ebf67d8"
+      url "https://github.com/autokitteh/autokitteh/releases/download/v0.22.0/autokitteh_linux_arm64.tar.gz"
+      sha256 "9ecab5ccda3196c6c6110da26c9f6ece131df1d6b67ac4b0696ff2eb7f1e85ee"
       def install
         bin.install "ak"
         generate_completions_from_executable(bin/"ak", "completion")
